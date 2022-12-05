@@ -18,12 +18,12 @@ public class EjemploStringTestRendimientoConcat {
             //c += a + b + "\n"; //500 => 17ms,1000 =>19ms
             sb.append(a).append(b).append("\n"); //500 => 0ms , 1000 => 0ms
         }
+        System.gc();
 
         long fin = System.currentTimeMillis();
-
         System.out.println(fin - inicio);
-
         System.out.println("c = " + c);
         System.out.println("sb = " + sb.toString());
+        System.exit(0);
     }
 }
